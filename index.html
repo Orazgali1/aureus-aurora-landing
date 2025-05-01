@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aureus Motors</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#111',
+            accent: '#eab308'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 5px #eab30880, 0 0 10px #eab30860, 0 0 15px #eab30840;
+      }
+      50% {
+        box-shadow: 0 0 15px #eab308cc, 0 0 30px #eab308aa, 0 0 45px #eab30888;
+      }
+      100% {
+        box-shadow: 0 0 5px #eab30880, 0 0 10px #eab30860, 0 0 15px #eab30840;
+      }
+    }
+    .animate-glow {
+      animation: glow 2.5s ease-in-out infinite;
+    }
+  </style>
+  
+</head>
+<body class="bg-black text-white font-sans">
+  <!-- Навигация -->
+  <header class="fixed top-0 left-0 w-full bg-black/80 backdrop-blur-md z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <div class="flex items-center gap-3">
+        <img src="images/Logo.png" alt="Aureus Motors" class="w-10 h-10 object-contain drop-shadow-[0_0_10px_#eab30880]" />
+        <span class="text-xl font-bold text-white">Aureus Motors</span>
+      </div>      
+      <nav class="hidden md:flex gap-6">
+        <a href="#about" class="hover:text-accent">О модели</a>
+        <a href="#models" class="hover:text-accent">Модели</a>
+        <a href="#contact" class="hover:text-accent">Тест-драйв</a>
+      </nav>
+      <button id="menu-toggle" class="md:hidden text-2xl">☰</button>
+    </div>
+    <div id="mobile-menu" class="hidden flex-col md:hidden px-6 pb-4">
+      <a href="#about" class="py-2 hover:text-accent">О модели</a>
+      <a href="#models" class="py-2 hover:text-accent">Модели</a>
+      <a href="#contact" class="py-2 hover:text-accent">Тест-драйв</a>
+    </div>
+  </header>
+
+  <main class="pt-24">
+    <section class="text-center px-6 bg-cover bg-center flex flex-col items-center justify-center" style="background-image: url('images/Model X2.png'); min-height: 100vh;">
+      <h1 class="text-5xl font-bold mb-6" data-aos="fade-up">Shadowline X</h1>
+      <p class="text-lg mb-8" data-aos="fade-up" data-aos-delay="100">Элитный автомобиль нового поколения</p>
+      <a href="#models" class="bg-white text-black px-6 py-3 rounded hover:bg-accent hover:text-white transition" data-aos="fade-up" data-aos-delay="200">
+        Смотреть коллекцию
+      </a>
+    </section>
+</a>
+    <!-- О модели -->
+    <section id="about" class="py-20 px-6 bg-black">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8" data-aos="fade-up">Преимущества</h2>
+        <div class="grid md:grid-cols-3 gap-8 text-white">
+          <div data-aos="fade-up" data-aos-delay="100">
+            <h3 class="text-xl font-semibold mb-2">Мощность</h3>
+            <p>650 л.с.</p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="200">
+            <h3 class="text-xl font-semibold mb-2">Разгон</h3>
+            <p>0–100 км/ч за 3.2 секунды</p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="300">
+            <h3 class="text-xl font-semibold mb-2">Максимальная скорость</h3>
+            <p>320 км/ч</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Модели -->
+<section id="models" class="py-20 px-6 bg-gray-900">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Наши модели</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <!-- Shadowline X -->
+      <div class="bg-black p-4 rounded shadow-lg transform transition duration-300 hover:scale-[1.03] hover:shadow-[0_0_20px_#eab30850] group" data-aos="fade-up">
+        <div class="overflow-hidden rounded">
+          <img src="images/sport car.png" class="rounded transition duration-300 group-hover:scale-105" alt="Shadowline X">
+        </div>
+        <h3 class="text-xl font-bold mt-4 mb-2">Shadowline X</h3>
+        <p class="text-gray-300">Флагман модели. Цена: от 240 000$</p>
+      </div>
+
+      <!-- Velvet V12 -->
+      <div class="bg-black p-4 rounded shadow-lg transform transition duration-300 hover:scale-[1.03] hover:shadow-[0_0_20px_#eab30850] group" data-aos="fade-up" data-aos-delay="100">
+        <div class="overflow-hidden rounded">
+          <img src="images/Sedan .png" class="rounded transition duration-300 group-hover:scale-105" alt="Velvet V12">
+        </div>
+        <h3 class="text-xl font-bold mt-4 mb-2">Velvet V12</h3>
+        <p class="text-gray-300">Мягкий дизайн и мощность. Цена: от 76 000$</p>
+      </div>
+
+      <!-- Aureus Inferno GT-R -->
+      <div class="bg-black p-4 rounded shadow-lg transform transition duration-300 hover:scale-[1.03] hover:shadow-[0_0_20px_#eab30850] group" data-aos="fade-up" data-aos-delay="200">
+        <div class="overflow-hidden rounded">
+          <img src="images/Aureus Inferno GT-R.png" class="rounded transition duration-300 group-hover:scale-105" alt="Aureus Inferno GT-R">
+        </div>
+        <h3 class="text-xl font-bold mt-4 mb-2">Aureus Inferno GT-R</h3>
+        <p class="text-gray-300">Скорость в тени. Цена: от 200 000$</p>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+<!-- Shadowline X подробная карточка -->
+<section class="py-20 px-6 bg-black text-white">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    
+    <!-- Картинка -->
+    <div class="overflow-hidden rounded shadow-lg">
+      <img src="images/model x.png" alt="Shadowline X" class="w-full h-auto transition duration-300 hover:scale-105">
+    </div>
+
+    <!-- Описание -->
+    <div>
+      <h2 class="text-4xl font-bold text-accent mb-4">Shadowline X</h2>
+      <p class="text-lg text-gray-300 mb-6">
+        Shadowline X — это воплощение силы, стиля и технологий нового поколения. 
+        Этот флагман бренда сочетает в себе элегантность, агрессивный дизайн и инновационные инженерные решения.
+      </p>
+
+      <ul class="mb-6 text-gray-400 space-y-2">
+        <li> Мощность: 650 л.с.</li>
+        <li> Разгон 0–100 км/ч: 3.2 секунды</li>
+        <li> Макс. скорость: 320 км/ч</li>
+        <li> Привод: Полный, электрический</li>
+        <li> Цена: от <span class="text-white font-semibold">240 000$</span></li>
+      </ul>
+
+      <a href="#contact" class="inline-block bg-accent text-black font-semibold px-6 py-3 rounded hover:bg-yellow-500 transition">
+        Записаться на тест-драйв
+      </a>
+    </div>
+
+  </div>
+</section>
+<!-- VELVET V12 -->
+<section class="py-20 px-6 bg-gray-900 text-white">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div class="overflow-hidden rounded shadow-lg">
+      <img src="images/Sedan .png" alt="Velvet V12" class="w-full h-auto transition duration-300 hover:scale-105">
+    </div>
+    <div>
+      <h2 class="text-4xl font-bold text-accent mb-4">Velvet V12</h2>
+      <p class="text-lg text-gray-300 mb-6">
+        Velvet V12 — это роскошь в движении. Безупречно сбалансированный седан с мягкой динамикой, тихим характером и V12-сердцем, которое не терпит компромиссов.
+      </p>
+      <ul class="mb-6 text-gray-400 space-y-2 text-base">
+        <li>Мощность: 520 л.с.</li>
+        <li>Разгон 0–100 км/ч: 4.1 секунды</li>
+        <li>Макс. скорость: 280 км/ч</li>
+        <li>Привод: Задний, бензиновый</li>
+        <li>Цена: от <span class="text-white font-semibold">76 000$</span></li>
+      </ul>
+      <a href="#contact" class="inline-block bg-accent text-black font-semibold px-6 py-3 rounded hover:bg-yellow-500 transition">Записаться на тест-драйв</a>
+    </div>
+  </div>
+</section>
+
+<!-- AUREUS INFERNO GT-R -->
+<section class="py-20 px-6 bg-black text-white">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div class="overflow-hidden rounded shadow-lg">
+      <img src="images/Aureus Inferno GT-R.png" alt="Inferno GT-R" class="w-full h-auto transition duration-300 hover:scale-105">
+    </div>
+    <div>
+      <h2 class="text-4xl font-bold text-accent mb-4">Aureus Inferno GT-R</h2>
+      <p class="text-lg text-gray-300 mb-6">
+        Inferno GT-R — настоящий монстр трека и улиц. Максимально агрессивная аэродинамика, заострённый силуэт и мощность, которую можно только укротить, но не приручить.
+      </p>
+      <ul class="mb-6 text-gray-400 space-y-2 text-base">
+        <li>Мощность: 710 л.с.</li>
+        <li>Разгон 0–100 км/ч: 2.9 секунды</li>
+        <li>Макс. скорость: 340 км/ч</li>
+        <li>Привод: Полный, гибрид</li>
+        <li>Цена: от <span class="text-white font-semibold">200 000$</span></li>
+      </ul>
+      <a href="#contact" class="inline-block bg-accent text-black font-semibold px-6 py-3 rounded hover:bg-yellow-500 transition">Записаться на тест-драйв</a>
+    </div>
+  </div>
+</section>
+
+   <!-- Бронирование тест-драйва -->
+<section id="contact" class="py-20 px-6 bg-black text-white">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-accent mb-6">Бронирование тест-драйва</h2>
+      <form class="flex flex-col gap-6">
+        <input type="text" placeholder="Ваше имя" class="p-4 rounded bg-black border border-gray-600 text-white focus:outline-none focus:border-accent transition" />
+        <input type="tel" placeholder="Телефон" class="p-4 rounded bg-black border border-gray-600 text-white focus:outline-none focus:border-accent transition" />
+        <button type="submit" class="bg-accent text-black font-semibold py-4 rounded hover:bg-yellow-500 transition">
+          Отправить заявку
+        </button>
+      </form>
+    </div>
+  </section>
+  </main>
+
+  <footer class="bg-black text-gray-400 py-12 px-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
+  
+      <!-- Логотип и описание -->
+      <div>
+        <h3 class="text-2xl font-bold text-white mb-4">Aureus Motors</h3>
+        <p class="text-sm">
+          Этот сайт создан в рамках обучения.<br />
+          Разработано: <span class="text-white font-semibold">Nurgaliev Orazgali</span><br />
+          Год: 2025
+        </p>
+      </div>
+  
+      <!-- Навигация -->
+      <div>
+        <h4 class="text-lg text-white font-semibold mb-4">Навигация</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#about" class="hover:text-accent transition">О модели</a></li>
+          <li><a href="#models" class="hover:text-accent transition">Модели</a></li>
+          <li><a href="#contact" class="hover:text-accent transition">Тест-драйв</a></li>
+        </ul>
+      </div>
+  
+      <!-- Контакты -->
+      <div>
+        <h4 class="text-lg text-white font-semibold mb-4">Контакты</h4>
+        <ul class="text-sm space-y-2">
+          <li>Телефон: +7 (777) 123-45-67</li>
+          <li>Email: example@mail.com</li>
+          <li>Алматы, Казахстан</li>
+        </ul>
+      </div>
+  
+      <!-- Соц. сети -->
+      <div>
+        <h4 class="text-lg text-white font-semibold mb-4">Мы в сети</h4>
+        <div class="flex gap-4 text-2xl">
+          <a href="#" class="hover:text-accent transition"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="hover:text-accent transition"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-accent transition"><i class="fab fa-telegram-plane"></i></a>
+          <a href="#" class="hover:text-accent transition"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+  
+    </div>
+
+    <div class="mt-10 text-center">
+      <a href="Aurora.html"
+         class="inline-flex items-center gap-2 px-6 py-3 bg-[#b91c1c] text-white font-semibold rounded-full hover:bg-[#a01111] transition-shadow duration-300 shadow-lg hover:shadow-[0_0_20px_#b91c1c] animate-glow text-lg">
+        <i class="fas fa-bolt"></i>
+        Перейти к Aureus Aurora
+      </a>
+    </div>
+    
+    <div class="text-center text-xs text-gray-500 mt-12 border-t border-gray-800 pt-6">
+      © 2025 Aureus Motors. Все права защищены.
+    </div>
+
+  </footer>
+  
+<!-- Кнопка "Наверх" -->
+<button id="to-top" class="fixed bottom-6 right-6 bg-accent text-black p-4 rounded-full z-50 transition hidden animate-glow hover:scale-110">
+    <i class="fas fa-arrow-up text-xl"></i>
+  </button>
+  
+  <script>
+    AOS.init();
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+  
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toTopBtn = document.getElementById("to-top");
+  
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          toTopBtn.classList.remove("hidden");
+        } else {
+          toTopBtn.classList.add("hidden");
+        }
+      });
+  
+      toTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+    });
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aureus Aurora</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#ffffff',
+            accent: '#b91c1c',
+            textbase: '#111111'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    @keyframes glow {
+      0% { box-shadow: 0 0 5px #b91c1c80, 0 0 10px #b91c1c60; }
+      50% { box-shadow: 0 0 20px #b91c1ccc, 0 0 30px #b91c1caa; }
+      100% { box-shadow: 0 0 5px #b91c1c80, 0 0 10px #b91c1c60; }
+    }
+    .animate-glow {
+      animation: glow 2.5s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-white text-black font-sans">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <div class="flex items-center gap-3">
+        <img src="images/Logo.png" alt="Aureus Aurora" class="w-10 h-10 object-contain drop-shadow-[0_0_10px_#b91c1c80]" />
+        <span class="text-xl font-bold">Aureus Aurora</span>
+      </div>
+      <nav class="hidden md:flex gap-6">
+        <a href="#about" class="hover:text-accent">О модели</a>
+        <a href="#models" class="hover:text-accent">Модели</a>
+        <a href="#contact" class="hover:text-accent">Тест-драйв</a>
+      </nav>
+      <button id="menu-toggle" class="md:hidden text-2xl">☰</button>
+    </div>
+    <div id="mobile-menu" class="hidden flex-col md:hidden px-6 pb-4">
+      <a href="#about" class="py-2 hover:text-accent">О модели</a>
+      <a href="#models" class="py-2 hover:text-accent">Модели</a>
+      <a href="#contact" class="py-2 hover:text-accent">Тест-драйв</a>
+    </div>
+  </header>
+
+  <main class="pt-24">
+  <!-- Hero Section -->
+<section class="relative bg-cover bg-center min-h-screen flex items-center justify-center px-4"
+style="background-image: url('images/Aureus Crystal Aero.png');">
+
+<div class="text-center translate-y-[-20%]" data-aos="fade-up">
+<div class="inline-block backdrop-blur-sm bg-white/10 border border-white/20 rounded-xl px-8 py-6 shadow-lg">
+  <h1 class="text-6xl font-extrabold text-yellow-400 drop-shadow-[0_0_25px_rgba(234,179,8,0.8)] bg-black/60 px-6 py-2 rounded">
+    Aureus Aurora
+  </h1>  
+<a href="#models"
+class="mt-6 inline-block bg-red-600 text-white px-8 py-3 rounded hover:bg-red-700 transition">
+Открыть коллекцию
+</a>
+</div>
+</div>
+
+</section>
+
+
+
+
+    <!-- О модели -->
+    <section id="about" class="py-20 px-6 bg-white">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-extrabold text-black mb-8" data-aos="fade-up">Преимущества Aurora</h2>
+        <div class="grid md:grid-cols-3 gap-8 text-black">
+          <div data-aos="fade-up" data-aos-delay="100">
+            <h3 class="text-xl font-semibold mb-2">Экологичность</h3>
+            <p>100% электрические технологии</p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="200">
+            <h3 class="text-xl font-semibold mb-2">Изысканность</h3>
+            <p>Материалы премиум-класса</p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="300">
+            <h3 class="text-xl font-semibold mb-2">Безопасность</h3>
+            <p>Интеллектуальная система защиты</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Модели -->
+    <section id="models" class="py-20 px-6 bg-gray-100">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12 text-black" data-aos="fade-up">Новая коллекция</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+
+          <div class="bg-white p-5 rounded shadow-md transform transition duration-300 hover:scale-[1.03] hover:shadow-lg group" data-aos="fade-up">
+            <div class="overflow-hidden rounded">
+              <img src="images/Aureus Opal.png" class="rounded transition duration-300 group-hover:scale-105" alt="Aureus Opal">
+            </div>
+            <h3 class="text-xl font-bold mt-4 mb-2">Aureus Opal</h3>
+            <p class="text-gray-600">Кроссовер со стеклянной элегантностью. От $85,000</p>
+          </div>
+
+          <div class="bg-white p-5 rounded shadow-md transform transition duration-300 hover:scale-[1.03] hover:shadow-lg group" data-aos="fade-up" data-aos-delay="100">
+            <div class="overflow-hidden rounded">
+              <img src="images/Rubin.png" class="rounded transition duration-300 group-hover:scale-105" alt="Aureus Ruby GT">
+            </div>
+            <h3 class="text-xl font-bold mt-4 mb-2">Aureus Ruby GT</h3>
+            <p class="text-gray-600">Роскошное купе с рубиновым характером. От $220,000</p>
+          </div>
+
+          <div class="bg-white p-5 rounded shadow-md transform transition duration-300 hover:scale-[1.03] hover:shadow-lg group" data-aos="fade-up" data-aos-delay="200">
+            <div class="overflow-hidden rounded">
+              <img src="images/Aureus Crystal Aero.png" class="rounded transition duration-300 group-hover:scale-105" alt="Aureus Crystal Aero">
+            </div>
+            <h3 class="text-xl font-bold mt-4 mb-2">Aureus Crystal Aero</h3>
+            <p class="text-gray-600">Футуристичный седан с безупречной аэродинамикой. От $300,000</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 px-6 bg-white text-black">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      
+          <!-- Картинка -->
+          <div class="overflow-hidden rounded shadow-xl animate-glow">
+            <img src="images/Aureus Opal.png" alt="Aureus Opal" class="w-full h-auto transition duration-300 hover:scale-105">
+          </div>
+      
+          <!-- Описание -->
+          <div>
+            <h2 class="text-4xl font-bold text-accent mb-4">Aureus Opal</h2>
+            <p class="text-lg text-gray-800 mb-6">
+              Элегантный городской кроссовер с утончённым стилем и мощным электрическим сердцем. Идеален для тех, кто ценит комфорт, технологичность и премиальное исполнение.
+            </p>
+      
+            <ul class="mb-6 text-gray-700 space-y-2">
+              <li>Мощность: 420 л.с.</li>
+              <li>Разгон 0–100 км/ч: 4.5 секунды</li>
+              <li>Макс. скорость: 250 км/ч</li>
+              <li>Привод: Полный, электрический</li>
+              <li>Цена: от <span class="text-black font-semibold">85 000$</span></li>
+            </ul>
+      
+            <a href="#contact" class="inline-block bg-accent text-white font-semibold px-6 py-3 rounded hover:bg-red-700 transition">
+              Записаться на тест-драйв
+            </a>
+          </div>
+      
+        </div>
+      </section>
+      
+      <section class="py-20 px-6 bg-gray-100 text-black">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      
+          <!-- Картинка -->
+          <div class="overflow-hidden rounded shadow-xl animate-glow">
+            <img src="images/Rubin.png" alt="Aureus Ruby GT" class="w-full h-auto transition duration-300 hover:scale-105">
+          </div>
+      
+          <!-- Описание -->
+          <div>
+            <h2 class="text-4xl font-bold text-accent mb-4">Aureus Ruby GT</h2>
+            <p class="text-lg text-gray-800 mb-6">
+              Купе с харизмой и дерзким характером. Стильная аэродинамика, роскошный салон и динамика, от которой захватывает дух.
+            </p>
+      
+            <ul class="mb-6 text-gray-700 space-y-2">
+              <li>Мощность: 550 л.с.</li>
+              <li>Разгон 0–100 км/ч: 3.9 секунды</li>
+              <li>Макс. скорость: 290 км/ч</li>
+              <li>Привод: Задний, гибрид</li>
+              <li>Цена: от <span class="text-black font-semibold">220 000$</span></li>
+            </ul>
+      
+            <a href="#contact" class="inline-block bg-accent text-white font-semibold px-6 py-3 rounded hover:bg-red-700 transition">
+              Записаться на тест-драйв
+            </a>
+          </div>
+      
+        </div>
+      </section>
+      
+      <section class="py-20 px-6 bg-white text-black">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      
+          <!-- Картинка -->
+          <div class="overflow-hidden rounded shadow-xl animate-glow">
+            <img src="images/Aureus Crystal Aero.png" alt="Aureus Crystal Aero" class="w-full h-auto transition duration-300 hover:scale-105">
+          </div>
+      
+          <!-- Описание -->
+          <div>
+            <h2 class="text-4xl font-bold text-accent mb-4">Aureus Crystal Aero</h2>
+            <p class="text-lg text-gray-800 mb-6">
+              Легкий, стремительный и футуристичный. Crystal Aero — воплощение аэродинамики и инновационных решений для городского и загородного движения.
+            </p>
+      
+            <ul class="mb-6 text-gray-700 space-y-2">
+              <li>Мощность: 600 л.с.</li>
+              <li>Разгон 0–100 км/ч: 3.6 секунды</li>
+              <li>Макс. скорость: 310 км/ч</li>
+              <li>Привод: Полный, электрический</li>
+              <li>Цена: от <span class="text-black font-semibold">300 000$</span></li>
+            </ul>
+      
+            <a href="#contact" class="inline-block bg-accent text-white font-semibold px-6 py-3 rounded hover:bg-red-700 transition">
+              Записаться на тест-драйв
+            </a>
+          </div>
+      
+        </div>
+      </section>
+      
+      <style>
+        @keyframes glow {
+          0% { box-shadow: 0 0 5px #b91c1c80, 0 0 10px #b91c1c60; }
+          50% { box-shadow: 0 0 20px #b91c1ccc, 0 0 30px #b91c1caa; }
+          100% { box-shadow: 0 0 5px #b91c1c80, 0 0 10px #b91c1c60; }
+        }
+        .animate-glow {
+          animation: glow 2.5s ease-in-out infinite;
+        }
+      </style>
+      
+      <!-- Бронирование тест-драйва -->
+<section id="contact" class="py-20 px-6 bg-white text-black">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-accent mb-6" data-aos="fade-up">Бронирование тест-драйва</h2>
+      <form class="flex flex-col gap-6" data-aos="fade-up" data-aos-delay="100">
+        <input type="text" placeholder="Ваше имя" 
+               class="p-4 rounded bg-white border border-gray-300 text-black focus:outline-none focus:border-accent transition shadow" />
+        
+        <input type="tel" placeholder="Телефон" 
+               class="p-4 rounded bg-white border border-gray-300 text-black focus:outline-none focus:border-accent transition shadow" />
+  
+        <textarea placeholder="Комментарий (необязательно)" rows="4"
+                  class="p-4 rounded bg-white border border-gray-300 text-black focus:outline-none focus:border-accent transition shadow"></textarea>
+  
+        <button type="submit" 
+                class="bg-accent text-white font-semibold py-4 rounded shadow-md hover:bg-red-700 transition animate-glow">
+          Отправить заявку
+        </button>
+      </form>
+    </div>
+
+  </section>
+  
+
+  <footer class="bg-white text-gray-800 border-t border-gray-200 pt-12 px-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
+  
+      <!-- Логотип и описание -->
+      <div>
+        <h3 class="text-2xl font-bold text-accent mb-4">Aureus Aurora</h3>
+        <p class="text-sm leading-relaxed">
+          Концептуальный проект в рамках обучения.<br>
+          Все автомобили вымышлены и не представляют реальные модели.<br>
+          Разработка: <span class="text-black font-semibold">Nurgaliev Orazgali</span><br>
+          Год: 2025
+        </p>
+      </div>
+  
+      <!-- Навигация -->
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Навигация</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#about" class="hover:text-accent transition">О модели</a></li>
+          <li><a href="#models" class="hover:text-accent transition">Модели</a></li>
+          <li><a href="#contact" class="hover:text-accent transition">Тест-драйв</a></li>
+        </ul>
+      </div>
+  
+      <!-- Контакты -->
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Контакты</h4>
+        <ul class="text-sm space-y-2">
+          <li>Телефон: +7 (777) 123-45-67</li>
+          <li>Email: example@mail.com</li>
+          <li>Алматы, Казахстан</li>
+        </ul>
+      </div>
+  
+      <!-- Соц. сети -->
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Мы в сети</h4>
+        <div class="flex gap-4 text-2xl text-accent">
+          <a href="#" class="hover:text-black transition"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="hover:text-black transition"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-black transition"><i class="fab fa-telegram-plane"></i></a>
+          <a href="#" class="hover:text-black transition"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+  
+    </div>
+  
+    <div class="mt-10 text-center">
+      <a href="index.html"
+         class="inline-flex items-center gap-2 px-6 py-3 bg-black text-white font-semibold rounded-full border border-yellow-500 hover:bg-gray-900 hover:text-yellow-400 shadow-md hover:shadow-[0_0_20px_#eab308] animate-glow text-lg transition duration-300">
+        <i class="fas fa-moon text-yellow-400"></i>
+        Перейти к Aureus Motors
+      </a>
+    </div>
+  
+    <div class="text-center text-xs text-gray-500 mt-12 border-t border-gray-200 pt-6">
+      © 2025 Aureus Aurora. Все права защищены. Проект не является коммерческим.
+    </div>
+  </footer>
+  
+  
+    <!-- Кнопка "наверх" -->
+    <button id="to-top" class="fixed bottom-6 right-6 bg-accent text-white p-4 rounded-full z-50 transition hidden animate-glow hover:scale-110">
+      <i class="fas fa-arrow-up text-xl"></i>
+    </button>
+  </main>
+
+  <script>
+    AOS.init();
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+
+    const toTopBtn = document.getElementById("to-top");
+    window.addEventListener("scroll", () => {
+      toTopBtn.classList.toggle("hidden", window.scrollY < 300);
+    });
+    toTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
